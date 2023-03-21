@@ -349,7 +349,7 @@ module.exports = {
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
 Detectado @${m.participant.split`@`[0]} mensaje eliminado
-Pará desactivar esta opción escriba:
+Para desactivar esta opción escriba:
 *.enable delete*
 `.trim(), m.message, {
       contextInfo: {
