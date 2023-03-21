@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
 let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw 'Etiquete a uno, e ingrese el número para verificación!'
+  if (!who) throw 'Etiqueta a alguien, e ingrese el número de verificación.'
   // if (participants.map(v=>v.jid).includes(global.conn.user.jid)) {
     global.DATABASE._data.chats[m.chat].premium = true
   var nomor = m.sender
