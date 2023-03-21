@@ -1,5 +1,5 @@
 let handler = async (m, { conn }) => {
-  if (!m.quoted) throw 'Etiqueta un mensaje!'
+  if (!m.quoted) throw 'Necesitarás etiquetar un mensaje para eso.'
   if (!m.quoted.fromMe) throw false
   if (!m.quoted.id) throw false
   let members = m.quoted.chat.endsWith('g.us') ? (await conn.groupMetadata(m.quoted.chat)).participants.length - 1 : m.quoted.chat.endsWith('@broadcast') ? -1 : 1
