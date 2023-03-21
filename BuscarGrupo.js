@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, text }) => {
-    if (!text) throw 'Que clase de grupo estas buscando?'
+    if (!text) throw '¿Que clase de grupo estas buscando?'
     let res = await fetch(global.API('xteam', '/search/grupwa', {
         q: text
     }, 'd90a9e986e18778b'))
